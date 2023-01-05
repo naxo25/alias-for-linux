@@ -9,12 +9,19 @@
     # alias
     alias .='subl .'
     alias doc='cd ~/Documentos/'
+    alias pega='cd ~/Pega/'
+    alias work='pega'
     alias dc='cd Documentos; cd '
     alias lg='cd ~/Pega/lg-smart-tv'
     alias Samsung='cd ~/Pega/Samsung'
+    alias ay='cd ~/Pega/ayayay'
+    alias aytv='cd ~/Pega/ayayaytvvite'
     alias est='cd ~/Pega/est*front-3'
     alias ott='cd ~/Pega/OTT'
     alias n='npm run'
+    alias news='/home/nax/Documentos/"Proyectos nuevos"'
+    alias pry='/home/nax/Documentos/Proyectos'
+    alias sag='sudo apt-get'
     alias sag='sudo apt-get'
     alias clean="sag autoremove && sag autoclean && sag clean"
     alias cpreadme="cp /home/nax/Documentos/Misc/readme.md ./"
@@ -23,8 +30,11 @@
     alias update="sag update && sag upgrade"
     alias brc="bashrc"
     alias bashrc="subl ~/.bashrc"
-    alias src="source ~/.bashrc"
+    alias sourcerc="source ~/.bashrc"
+    alias rbashrc="source ~/.bashrc"
+    alias sbashrc="sourcerc"
     alias n18='nvm use 18'
+    alias n16='nvm use 16'
     alias n14='nvm use 14'
     alias n10='nvm use 10'
     alias n8='nvm use 8'
@@ -36,8 +46,11 @@
     alias qdw='yarn quasar dev -m pwa'
     alias qbw='yarn quasar build -m pwa'
     alias i='npm install'
-    alias dev='yarn dev'
-    alias deploy='y deploy'
+    alias nr='npm run'
+    alias dev='yarn dev || qd'
+    alias deploy='yarn deploy'
+    alias build='yarn build'
+    alias b='build'
     alias d='n10; yarn dev'
     alias ydp='yarn dev:prod'
     alias postman='/home/nax/Documentos/Postman/Postman'
@@ -45,20 +58,20 @@
     alias mouse='sudo modprobe -r psmouse && sudo modprobe psmouse'
     alias time='uptime -p && uptime -s'
     alias clavenet='aSjNDRiPo4BAf5qDxrRa'
-    alias promo='subl /home/nax/Pega/estadiocdf-front-3/src/views/landing/guest.vue /home/nax/Pega/estadiocdf-front-3/index.html'
-    alias cdf='npm run deploy:production:cdf'
     alias android='/home/nax/android-studio/bin/studio.sh'
     alias y='yarn'
     alias yp='yarn push'
     alias fb='firebase logout && firebase login'
     alias fd='firebase deploy --only hosting'
-    alias sn='subl /home/nax/Documentos/SnippetsCopilot/example.sublime-snippet'
+    alias snp='subl /home/nax/.config/sublime-text/Packages/User/example.sublime-snippet'
     alias cpservor='cp /home/nax/Documentos/_.Servor/package.json ./ && cp -r /home/nax/Documentos/_.Servor/node_modules ./'
     alias cps='cpservor && dev'
     alias dist='cd dist && cps'
     alias tasks='/home/nax/Documentos/naxTasksApp/dist/electron/Packaged/naxTasksApp-*.AppImage'
-    alias t='tasks'
-    alias gt='yarn git'
+    alias t='tasks & disown'
+    alias gh='yarn git'
+    alias pg='yarn pag'
+    alias cloud='brave-browser https://platform.cloudways.com/apps/2682466/deployment'
 
     # LG
     alias device='ares-setup-device'
@@ -67,18 +80,20 @@
 
     alias buildlg='deploylg && ares-package -o dist/lg dist/spa'
     alias installlg='ares-install --device tvlg dist/lg/com.*.app*.ipk'
-    alias installlgs='ares-install --device tvlgs dist/lg/com.*.app*.ipk'
     alias launchlg='ares-launch --device tvlg com.ayayay.app'
+    alias ylg='buildlg; installlg; launchlg'
+
+    alias installlgs='ares-install --device tvlgs dist/lg/com.*.app*.ipk'
     alias launchlgs='ares-launch --device tvlgs com.ayayay.app'
     alias dlg='deploylg'
     alias ilg='installlg'
-    alias ylg='buildlg; installlg; launchlg'
     alias ylgs='buildlg; installlgs; launchlgs'
 
     # git
+    alias pm='git add .; git commit -m $1; push'
     alias ga='git add'
     alias cm='git commit -m'
-    alias st='git status'
+    alias st='c && git status'
     alias ch='git checkout'
     alias br='git branch'
     alias push='git push origin'
@@ -87,12 +102,12 @@
     alias pushm='git push origin master'
     alias amend='git commit --amend -m'
     alias reset='git reset --soft HEAD~1'
-    alias gc='cd ~/Documentos; git clone'
+    alias gc='git clone'
     alias gp='git pull'
 
     # yarn
     export PATH="$(yarn global bin):$PATH"
-    export PATH="/home/nax/Pega/lg-smart-tv/lg/CLI/bin:$PATH"
+    export PATH=$PATH:/home/nax/Ares-CLI/bin
 
     # Variables entorno
     export ANDROID_HOME="$HOME/Android/Sdk"
