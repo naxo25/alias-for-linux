@@ -1,13 +1,13 @@
-# Alias for linux
+### Alias for linux
 
-### Open bash
+##### Open terminal
 
     sudo nano ~/.bashrc
   
-### Add alias in .bashrc
+##### Alias in .bashrc
 
-    # alias
     alias .='subl .'
+    alias sm='smerge .'
     alias doc='cd ~/Documentos/'
     alias pega='cd ~/Pega/'
     alias work='pega'
@@ -31,8 +31,7 @@
     alias brc="bashrc"
     alias bashrc="subl ~/.bashrc"
     alias sourcerc="source ~/.bashrc"
-    alias rbashrc="source ~/.bashrc"
-    alias sbashrc="sourcerc"
+    alias src="source ~/.bashrc"
     alias n18='nvm use 18'
     alias n16='nvm use 16'
     alias n14='nvm use 14'
@@ -45,11 +44,11 @@
     alias qbs='yarn quasar build -m ssr'
     alias qdw='yarn quasar dev -m pwa'
     alias qbw='yarn quasar build -m pwa'
-    alias i='npm install'
+    alias i='pnpm install || npm install'
     alias nr='npm run'
-    alias dev='yarn dev || qd'
-    alias deploy='yarn deploy'
-    alias build='yarn build'
+    alias dev='pnpm run dev || yarn dev || qd'
+    alias deploy='pnpm deploy || yarn deploy'
+    alias build='pnpm build || yarn build'
     alias b='build'
     alias d='n10; yarn dev'
     alias ydp='yarn dev:prod'
@@ -60,7 +59,6 @@
     alias clavenet='aSjNDRiPo4BAf5qDxrRa'
     alias android='/home/nax/android-studio/bin/studio.sh'
     alias y='yarn'
-    alias yp='yarn push'
     alias fb='firebase logout && firebase login'
     alias fd='firebase deploy --only hosting'
     alias snp='subl /home/nax/.config/sublime-text/Packages/User/example.sublime-snippet'
@@ -72,6 +70,7 @@
     alias gh='yarn git'
     alias pg='yarn pag'
     alias cloud='brave-browser https://platform.cloudways.com/apps/2682466/deployment'
+    alias publish='npm version patch && npm publish'
 
     # LG
     alias device='ares-setup-device'
@@ -96,7 +95,7 @@
     alias st='c && git status'
     alias ch='git checkout'
     alias br='git branch'
-    alias push='git push origin'
+    alias push='yarn push || git push origin'
     alias commit='git add . && git commit -m'
     alias cmm='git add . && git commit -m'
     alias pushm='git push origin master'
@@ -105,11 +104,8 @@
     alias gc='git clone'
     alias gp='git pull'
 
-    # yarn
-    export PATH="$(yarn global bin):$PATH"
-    export PATH=$PATH:/home/nax/Ares-CLI/bin
+#### Otras variables de entorno
 
-    # Variables entorno
     export ANDROID_HOME="$HOME/Android/Sdk"
     export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
     export JAVA_HOME="/usr/lib/jvm/java-1.8.0-openjdk-amd64"
@@ -122,14 +118,9 @@
     export PATH=$PATH:$HOME/tizen-studio/tools/ide/bin;
     export PATH=$PATH:$HOME/tizen-studio/tools;
 
-    # flutter
-    alias f='flutter';
-    export PATH=$PATH:$HOME/flutter/bin;
-    export PATH="$PATH":"$HOME/.pub-cache/bin"
-
     
 ### Reload .bashrc
 
     sudo source ~/.bashrc
 
-En windows es necesario reiniciar
+* En windows es necesario reiniciar
