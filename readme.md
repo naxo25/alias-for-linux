@@ -6,6 +6,13 @@
   
 ##### Alias in .bashrc
 
+    # alias
+    alias p='pnpm'
+    alias pi='pnpm i'
+    alias d='pnpm run dev || yarn dev || qd'
+    alias dp='pnpm deploy || yarn deploy'
+    alias b='pnpm build || yarn build'
+    
     alias .='subl .'
     alias sm='smerge .'
     alias doc='cd ~/Documentos/'
@@ -44,11 +51,7 @@
     alias qbs='yarn quasar build -m ssr'
     alias qdw='yarn quasar dev -m pwa'
     alias qbw='yarn quasar build -m pwa'
-    alias i='pnpm install || npm install'
     alias nr='npm run'
-    alias dev='pnpm run dev || yarn dev || qd'
-    alias deploy='pnpm deploy || yarn deploy'
-    alias build='pnpm build || yarn build'
     alias b='build'
     alias d='n10; yarn dev'
     alias ydp='yarn dev:prod'
@@ -71,23 +74,23 @@
     alias pg='yarn pag'
     alias cloud='brave-browser https://platform.cloudways.com/apps/2682466/deployment'
     alias publish='npm version patch && npm publish'
-
+    
     # LG
     alias device='ares-setup-device'
     alias nova='ares-novacom --device tvlg --getkey'
     alias deploylg='yarn build && node ./lg/build.js'
-
+    
     alias buildlg='deploylg && ares-package -o dist/lg dist/spa'
     alias installlg='ares-install --device tvlg dist/lg/com.*.app*.ipk'
     alias launchlg='ares-launch --device tvlg com.ayayay.app'
     alias ylg='buildlg; installlg; launchlg'
-
+    
     alias installlgs='ares-install --device tvlgs dist/lg/com.*.app*.ipk'
     alias launchlgs='ares-launch --device tvlgs com.ayayay.app'
     alias dlg='deploylg'
     alias ilg='installlg'
     alias ylgs='buildlg; installlgs; launchlgs'
-
+    
     # git
     alias pm='git add .; git commit -m $1; push'
     alias ga='git add'
